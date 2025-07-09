@@ -519,9 +519,9 @@ local function reanimate()
 	local novoid = true --prevents parts from going under workspace.FallenPartsDestroyHeight if you control them
 	local speedlimit = 3000 --makes your parts move slower if the magnitude of their velocity is higher than this
 	local retVelTime = 0.51 --time that claimed parts have velocity to reclaim in case u lose them
-	local walkSpeed = 16 --your walkspeed (can be changed at runtime)
+	local walkSpeed = 25 --your walkspeed (can be changed at runtime)
 	local jumpPower = 25 --your jump power (can be changed at runtime)
-	local gravity = 40 --how fast the characters velocity decreases while falling (can be changed at runtime)
+	local gravity = 37 --how fast the characters velocity decreases while falling (can be changed at runtime)
 	local ctrlclicktp = ctrltp --makes you teleport where u point ur mouse cursor at when click and hold ctrl down
 	local clickfling = clickfling --makes you fling the person you clicked when its available to do so
 	local flingvel = v3(15000,16000,15000) --the rotation velocity that ur character will have while flinging
@@ -1990,7 +1990,7 @@ end,
 			local Ychg=velYchg()/20
 
 
-RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,0)),deltaTime)  Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.1344640137963142,0,3.141592653589793)),deltaTime)  LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,0)),deltaTime)  RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(-0.2617993877991494+0.17453292519943295*sin((sine+10)*2),1.5707963267948966,0)),deltaTime)  RootJoint.C0=Lerp(RootJoint.C0,cfMul(cf(0.3+0.3*sin((sine+1)*1),2+0.2*sin((sine+2)*5),0.3+0.3*sin((sine+1)*1)),angles(-20.943951023931955,0,3.141592653589793)),deltaTime)  LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(-0.2617993877991494+0.17453292519943295*sin((sine+10)*2),-1.5707963267948966,0)),deltaTime) 
+RootJoint.C0=Lerp(RootJoint.C0,cfMul(cf(0.3+0.3*sin((sine+1)*1),2+0.5*sin((sine+2)*2),0.3+0.3*sin((sine+1)*1)),angles(-2.181661564992912+0.08726646259971647*sin((sine+1)*2),0,3.141592653589793)),deltaTime)  RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1,0),angles(0,1.5707963267948966,0)),deltaTime)  LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(-0.4363323129985824-0.10471975511965978*sin((sine+6)*2.5),-1.2217304763960306-0.10471975511965978*sin((sine+5)*4.5),0)),deltaTime)  Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.1344640137963142+0.06981317007977318*sin((sine+2)*3),0,3.141592653589793)),deltaTime)  LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1,0),angles(0,-1.5707963267948966,0)),deltaTime)  RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(-0.4363323129985824+0.10471975511965978*sin((sine+6)*3),1.2217304763960306+0.10471975511965978*sin((sine+5)*5),0)),deltaTime) 
 end,
 		jump = function()
 			velYchg()
